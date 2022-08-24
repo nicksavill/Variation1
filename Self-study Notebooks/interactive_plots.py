@@ -71,6 +71,7 @@ class Sample_size:
         fig.canvas.toolbar_visible = False
         ax.set_xlabel('Mass (kg)')
         ax.set_ylabel('Number of salmon')
+        plt.ion()
 
 
 class Normal_rule:
@@ -145,8 +146,8 @@ class Normal_rule:
         ax.spines['right'].set_visible(False)
         ax.spines['left'].set_visible(False)
         ax.get_yaxis().set_visible(False)
-        ax.set_xticks(ticks=range(-3, 4), labels=[
-                      f'$\\bar{{x}}{i:+.2g}s$' if i else '$\\bar{{x}}$' for i in range(-3, 4)])
+        ax.set_xticks(ticks=range(-3, 4), labels=[ f'$\\bar{{x}}{i:+.2g}s$' if i else '$\\bar{{x}}$' for i in range(-3, 4)])
+        plt.ion()
 
 
 class Normal_distribution:
@@ -206,6 +207,7 @@ class Normal_distribution:
         ax.spines['left'].set_visible(False)
         ax.get_yaxis().set_visible(False)
         ax.set_xlabel('Height (cm)')
+        plt.ion()
 
 
 class t_distribution:
@@ -273,7 +275,8 @@ class t_distribution:
         ax.get_yaxis().set_visible(False)
         ax.set_title('Comparison of $t$ and Normal distributions')
         ax.legend(bbox_to_anchor=(0.55, 1.0))
-    
+        plt.ion()
+   
         
 class Sampling:
     def getImage(self, image, zoom=1):
@@ -517,6 +520,7 @@ standard deviation $\sigma$.""",
         plt.subplots_adjust(hspace=0, wspace=0, left=0.05, right=0.99, bottom=0.1, top=1)
         fig.canvas.footer_visible = False
         fig.canvas.header_visible = False
+        plt.ion()
 
         [ax.axis('off') for ax in axs.values()]
 
@@ -614,6 +618,7 @@ class Distribution_of_sample_mean:
         ax.set_xlabel('Sample size $n$')
         ax.set_ylabel('Standard error of the mean (mm)')
         ax.set_ylim(0, 0.35)
+        plt.ion()
 
 
 class Null_hypothesis:
@@ -837,6 +842,7 @@ standard deviation $\sigma$
         plt.subplots_adjust(hspace=0, wspace=0, left=0.05, right=0.99, bottom=0.1, top=1)
         fig.canvas.footer_visible = False
         fig.canvas.header_visible = False
+        plt.ion()
 
         [ax.axis('off') for ax in axs.values()]
 
